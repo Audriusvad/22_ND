@@ -3,6 +3,7 @@ name = "streamlit-demo"
 version = "0.1.0"
 description = "A simple Streamlit demo app."
 dependencies = [
+    "langchain-openai>=0.3.25",
     "streamlit>=1.46.0",
 ]
 

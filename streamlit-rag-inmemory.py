@@ -23,7 +23,7 @@ endpoint = "https://models.github.ai/inference"
 model = "openai/gpt-4.1-nano"
 
 loader = WebBaseLoader(
-    web_paths=("https://lilianweng.github.io/posts/2017-06-21-overview/",),
+    web_paths=("https://en.wikipedia.org/wiki/Anyk%C5%A1%C4%8Diai",),
     bs_kwargs=dict(
         parse_only=bs4.SoupStrainer(
             class_=("post-content", "post-title", "post-header")
@@ -52,7 +52,7 @@ def format_docs(docs):
     print(docs)
     return "\n\n".join(doc.page_content for doc in docs)
 
-st.title("Streamlit LangChain Demo")
+st.title("Laba diena Lietuva")
 
 def generate_response(input_text):
     llm = ChatOpenAI(base_url=endpoint, temperature=0.7, api_key=token, model=model)
